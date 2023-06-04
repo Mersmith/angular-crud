@@ -1,0 +1,23 @@
+npm install -g @angular/cli
+
+ng new crudangular
+
+cd crudangular
+ng serve --open
+
+--> Opcional
+npm install bootstrap
+
+--> Crear componentes
+ng g c components/empleado/agregar-empleado
+ng g c components/empleado/editar-empleado
+ng g c components/empleado/listar-empleado
+
+--> Crear servicio alias
+ng generate service services/routes/route-alias
+ng generate service services/empleado/empleado-crud
+
+--> Variables de entorno
+ng generate environments
+
+--> GitHub

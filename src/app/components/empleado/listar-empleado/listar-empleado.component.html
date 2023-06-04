@@ -1,0 +1,24 @@
+<p>listar-empleado works!</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of Empleados; let iControl=index">
+            <td>{{empleado.id}}</td>
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.correo}}</td>
+            <td>
+                <a [routerLink]="routeAliasService.getRouteByAlias('empleado-editar') + '/' + empleado.id">Editar</a> 
+                |
+                <a (click)="borrarEmpleado(empleado.id, iControl)" >Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

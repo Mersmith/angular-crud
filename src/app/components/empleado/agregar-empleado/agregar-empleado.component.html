@@ -1,0 +1,15 @@
+<p>agregar-empleado works!</p>
+<form ngNativeValidate [formGroup]="formularioEmpleados" (ngSubmit)="agregarEmpleado()">
+    <div>
+        <label for="">Nombre:</label>
+        <input type="text" formControlName="nombre" required name="nombre" id="nombre" placeholder="Ingrese un nombre.">
+    </div>
+    <div>
+        <label for="">Correo:</label>
+        <input type="email" formControlName="correo" required name="correo" id="correo" placeholder="Ingrese un correo.">
+    </div>
+    <div>
+        <button type="submit">Agregar</button>
+        <a [routerLink]="routeAliasService.getRouteByAlias('empleado-lista')">Cancelar</a>
+    </div>
+</form>
